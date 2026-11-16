@@ -21,6 +21,10 @@
       el.setAttribute('aria-invalid', bad ? 'true' : 'false');
       if (bad) puuttuu.push(el.previousSibling ? el.previousSibling.textContent.trim() : id);
     });
+    var soitto = document.getElementById('soitto'), puh = document.getElementById('puhelin');
+    var puhPuuttuu = soitto && soitto.checked && !puh.value.trim();
+    puh.setAttribute('aria-invalid', puhPuuttuu ? 'true' : 'false');
+    if (puhPuuttuu) puuttuu.push('Puhelinnumero soittopyyntöä varten');
     if (puuttuu.length) {
       show('Täytä vielä: ' + puuttuu.join(', ').toLowerCase() + '.', false);
       return;
@@ -29,12 +33,13 @@
     if (data.get('_gotcha')) return;
     var endpoint = form.getAttribute('data-endpoint');
     var btn = form.querySelector('button[type=submit]');
+    var otsikko = (data.get('soittopyynto') ? 'SOITTOPYYNTÖ – ' : 'Tarjouspyyntö: ') + data.get('rooli');
 
     if (!endpoint) {
       var body = 'Nimi: ' + data.get('nimi') + '\nSähköposti: ' + data.get('email') +
         '\nPuhelin: ' + (data.get('puhelin') || '-') + '\nTaloyhtiö: ' + (data.get('taloyhtio') || '-') +
-        '\nTarve: ' + data.get('rooli') + '\n\n' + data.get('viesti');
-      location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent('Tarjouspyyntö: ' + data.get('rooli')) +
+        '\nTarve: ' + data.get('rooli') + '\nSoittopyyntö: ' + (data.get('soittopyynto') ? 'kyllä' : 'ei') + '\n\n' + data.get('viesti');
+      location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(otsikko) +
         '&body=' + encodeURIComponent(body);
       show('Sähköpostiohjelmasi avautui valmiilla viestillä. Paina siellä Lähetä. Jos mitään ei avautunut, kirjoita osoitteeseen ' + TO + '.', true);
       return;
@@ -42,7 +47,7 @@
 
     btn.disabled = true;
     btn.textContent = 'Lähetetään…';
-    data.append('_subject', 'Tarjouspyyntö: ' + data.get('rooli'));
+    data.append('_subject', otsikko);
     fetch(endpoint, { method: 'POST', body: data, headers: { Accept: 'application/json' } })
       .then(function (r) {
         if (!r.ok) throw new Error(r.status);

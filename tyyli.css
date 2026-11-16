@@ -202,3 +202,5 @@ footer .ai-note{flex-basis:100%;font-size:13px}
 .timing{margin-top:clamp(24px,4vw,36px);display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between;background:var(--tint);border-radius:14px;padding:20px 24px}
 .timing p{max-width:62ch;color:var(--muted)}
 .timing b{color:var(--ink)}
+.f-check,label.check{display:flex;gap:10px;align-items:center;font-weight:600;font-size:16px;cursor:pointer}
+label.check input{width:20px;height:20px;accent-color:var(--acc);margin:0}

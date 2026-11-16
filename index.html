@@ -303,7 +303,7 @@
     <div>
       <span class="eyebrow">Yhteys</span>
       <h2 id="yhteys-otsikko">Kerro taloyhtiönne tilanne</h2>
-      <p>Ensimmäinen keskustelu ja tarjous ovat maksuttomia eivätkä sido mihinkään.</p>
+      <p>Ensimmäinen keskustelu ja tarjous ovat maksuttomia eivätkä sido mihinkään. Jos haluat jutella puhelimessa, jätä soittopyyntö lomakkeella, niin soitan sinulle.</p>
       <div class="direct">
         <a href="mailto:mikko.kauppinen@hallitusammattilainen.fi">mikko.kauppinen@hallitusammattilainen.fi<small>Sähköposti</small></a>
         <a href="https://www.linkedin.com/in/mikko-kauppinen-8005861" rel="noopener">Mikko Kauppinen<small>LinkedIn</small></a>
@@ -315,7 +315,7 @@
         <label for="email">Sähköposti<input id="email" name="email" type="email" autocomplete="email" required></label>
       </div>
       <div class="two">
-        <label for="puhelin"><span>Puhelin <span class="opt">(vapaaehtoinen)</span></span><input id="puhelin" name="puhelin" type="tel" autocomplete="tel"></label>
+        <label for="puhelin"><span>Puhelin <span class="opt">(jos toivot soittoa)</span></span><input id="puhelin" name="puhelin" type="tel" autocomplete="tel"></label>
         <label for="yhtio"><span>Taloyhtiö <span class="opt">(vapaaehtoinen)</span></span><input id="yhtio" name="taloyhtio" autocomplete="organization"></label>
       </div>
       <label for="rooli">Mitä tarvitsette?
@@ -326,6 +326,7 @@
           <option>En ole vielä varma</option>
         </select>
       </label>
+      <label class="check" for="soitto"><input id="soitto" name="soittopyynto" type="checkbox" value="Kyllä"> Toivon, että soitat minulle</label>
       <label for="viesti">Viesti<textarea id="viesti" name="viesti" required placeholder="Esim. asuntojen määrä, tulevat korjaukset ja mikä nyt mietityttää"></textarea></label>
       <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button class="btn" type="submit">Lähetä viesti</button>
