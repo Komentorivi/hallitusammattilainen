@@ -196,3 +196,6 @@ footer a{color:var(--muted)}
 footer .ai-note{flex-basis:100%;font-size:13px}
 .contact form .note{color:var(--muted);margin:0}
 .contact form .note a{color:var(--acc)}
+.me .intro{font-size:clamp(18px,1.6vw,20px);color:var(--ink)}
+.me .me-h{font-size:19px;margin-top:10px}
+@media (min-width:821px){.me picture{position:sticky;top:96px}}
