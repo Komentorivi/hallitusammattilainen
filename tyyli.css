@@ -204,3 +204,4 @@ footer .ai-note{flex-basis:100%;font-size:13px}
 .timing b{color:var(--ink)}
 .f-check,label.check{display:flex;gap:10px;align-items:center;font-weight:600;font-size:16px;cursor:pointer}
 label.check input{width:20px;height:20px;accent-color:var(--acc);margin:0}
+.me .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
