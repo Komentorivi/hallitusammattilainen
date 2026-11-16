@@ -199,3 +199,6 @@ footer .ai-note{flex-basis:100%;font-size:13px}
 .me .intro{font-size:clamp(18px,1.6vw,20px);color:var(--ink)}
 .me .me-h{font-size:19px;margin-top:10px}
 @media (min-width:821px){.me picture{position:sticky;top:96px}}
+.timing{margin-top:clamp(24px,4vw,36px);display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between;background:var(--tint);border-radius:14px;padding:20px 24px}
+.timing p{max-width:62ch;color:var(--muted)}
+.timing b{color:var(--ink)}
