@@ -47,7 +47,7 @@
       .then(function (r) {
         if (!r.ok) throw new Error(r.status);
         form.reset();
-        show('Kiitos! Viesti on perillä. Vastaan yhden arkipäivän kuluessa.', true);
+        show('Kiitos! Viesti on perillä, ja palaan asiaan mahdollisimman pian.', true);
       })
       .catch(function () {
         show('Viesti ei lähtenyt. Kokeile uudelleen tai kirjoita suoraan osoitteeseen ' + TO + '.', false);

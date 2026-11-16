@@ -145,7 +145,7 @@ figure{margin:0}
 .me .txt p{max-width:62ch}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:8px}
 .facts div{border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-.facts b{font-family:var(--display);font-size:clamp(18px,1.8vw,22px);overflow-wrap:anywhere;display:block;color:var(--acc-d)}
+.facts b{font-family:var(--display);font-size:clamp(18px,1.8vw,22px);hyphens:manual;display:block;color:var(--acc-d)}
 .facts span{font-size:15px;color:var(--muted)}
 
 .faq{display:grid;gap:10px;max-width:820px}
@@ -192,3 +192,7 @@ footer a{color:var(--muted)}
 .doc p,.doc li{color:var(--muted)}
 .doc p+p{margin-top:12px}
 .doc ul{padding-left:22px;display:grid;gap:4px}
+
+footer .ai-note{flex-basis:100%;font-size:13px}
+.contact form .note{color:var(--muted);margin:0}
+.contact form .note a{color:var(--acc)}
