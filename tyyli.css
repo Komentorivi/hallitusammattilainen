@@ -123,6 +123,10 @@ figure{margin:0}
 .svc h3{font-size:21px}
 .svc p{color:var(--muted);font-size:17px}
 .svc ul{margin:4px 0 0;padding-left:20px;color:var(--muted);font-size:16px;display:grid;gap:4px}
+.svc .from{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+.svc .from b{display:block;font:800 26px/1.15 var(--display);color:var(--ink)}
+.svc .from span{display:block}
+.svc{grid-template-rows:auto auto 1fr auto}
 .price{margin-top:22px;font-size:17px;color:var(--muted)}
 .price b{color:var(--ink)}
 
